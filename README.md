@@ -18,7 +18,6 @@ This application receives a ticker input from a user and provides the latest sto
 
 ```
 python3 StockPrice.py
-
 Please enter the ticker(s) separated by comma : AMZN,AAPL
 The latest stock value for Amazon.com, Inc.(AMZN) is : 3152.79
 The latest stock value for Apple Inc.(AAPL) is : 172.39
