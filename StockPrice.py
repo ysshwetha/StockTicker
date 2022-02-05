@@ -6,7 +6,7 @@
 import requests # HTTP Library
 import json
 
-access_token = 'vHdL4dVNO7abKi7kr5WxA9l02hEhSXsq2SJbUkvF'
+access_token = '<update me>'
 
 # Get the input from user
 ticker_inp = input("Please enter the ticker(s) separated by comma : ")
@@ -24,6 +24,11 @@ def getStock(inp):
 	url_value=('https://yfapi.net/v6/finance/quote?region=US&lang=en&symbols={0}'.format(inp)) # We use the ticker input provided by user
 	apiresponse = requests.get(url=url_value,headers=header_value) # HTTPS call to the website
 	jsonresponse = json.loads(apiresponse.text) # Convert the results to JSON
+	
+	if apiresponse.status_code != 200:
+		print('Error invoking the yahoo stock API, please make sure that you have a valid AccessToken set at the begining of the script. You can sign up for a new API Key/Access Token from Sign up for API key https://www.yahoofinanceapi.com/tutorial.')
+		quit()
+		
 	jsonresult = jsonresponse['quoteResponse']['result'] # Extract the results
 	return jsonresult
 
