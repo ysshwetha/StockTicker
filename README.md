@@ -3,7 +3,7 @@ This application receives a ticker input from a user and provides the latest sto
 
 ## Key Points:
 1. This program calls Yahoo Finance API https://www.yahoofinanceapi.com/ to get the stock results 
-2. This API needs an access token, a free version of token is used within the program, **it has a hard limit of 100 requests per day**
+2. This API needs an access token, You can sign up for a new API Key/Access Token from https://www.yahoofinanceapi.com, **Free subscription has a hard limit of 100 requests per day**
 3. This programs expects one or more(upto 10) ticker value in a comma separated format as input from console 
 4. If no input is provided, program exits with a meaningful message. If the ticker value provided is not valid, program displays a helpful message
 5. Stock value is rounded to 2 digits 
